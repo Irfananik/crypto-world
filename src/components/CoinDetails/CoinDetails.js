@@ -13,9 +13,9 @@ const CoinDetails = () => {
             .then(data => setCoins(data))
     }, [id])
     return (
-        <div className="px-4 pt-20 pb-24 mx-auto max-w-7xl h-[60vh] md:px-2">
+        <div className="px-4 pt-20 pb-24 mx-auto max-w-7xl h-[90vh] md:px-2">
             <div className="grid grid-cols-1 gap-4 h-full content-center justify-items-center md:grid-cols-2">
-                <div>
+                <div className="order-2 md:order-1">
                     <h2 className="text-3xl">General Info:</h2>
                     <p className="text-lg">Name: {coin.name} </p>
                     <p className="text-lg">symbol: {coin.symbol} </p>
@@ -29,7 +29,7 @@ const CoinDetails = () => {
                     <p className="text-lg">Community Score: {coin.community_score} </p>
                     <p className="text-lg">Developer Score: {coin.developer_score} </p>
                 </div>
-                <div>
+                <div className="flex justify-cneter items-center order-1 md:order-2">
                     {
                         <img src={coin.image?.large} alt="coinImg" />
                     }

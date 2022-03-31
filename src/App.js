@@ -7,19 +7,24 @@ import Homepage from './components/Homepage/Homepage'
 import Coins from './components/Coins/Coins'
 import Contact from './components/Contact/Contact';
 import CoinDetails from './components/CoinDetails/CoinDetails';
+import BdAddress from './components/Contact/BdAddress'
+import UsAddress from './components/Contact/UsAddress'
 
 const App = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <Routes>
         <Route path='/' element={<Homepage />} />
-        <Route path='/about' element={<About/>} />
-        <Route path='/coins' element={<Coins/>} />
-        <Route path='/coin-details/:id' element={<CoinDetails/>} />
-        <Route path='/contact' element={<Contact/>} />
+        <Route path='/about' element={<About />} />
+        <Route path='/coins' element={<Coins />} />
+        <Route path='/coin-details/:id' element={<CoinDetails />} />
+        <Route path='/contact' element={<Contact />}>
+          <Route path='bd-address' element={<BdAddress />} />
+          <Route path='us-address' element={<UsAddress />} />
+        </Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
