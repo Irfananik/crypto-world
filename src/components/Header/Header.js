@@ -36,7 +36,7 @@ const Header = () => {
                 <CustomLink to='/coins'>Coins</CustomLink>
                 <CustomLink to='/contact'>Contact</CustomLink>
                 <CustomLink to='/about'>About</CustomLink>
-                {user?.uid ? <CustomLink onClick={handleSingOut} to='/login'>Logout</CustomLink> : <CustomLink to='/login'>Login</CustomLink>}
+                {user?.uid ? <button onClick={handleSingOut} className='logout-button'>Logout</button> : <CustomLink to='/login'>Login</CustomLink>}
             </div>
         </div>
     );

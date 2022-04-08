@@ -1,16 +1,17 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import {  getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.init';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
 
 const provider = new GoogleAuthProvider();
+const auth = getAuth(app);
 
 const Login = () => {
     const navigate = useNavigate()
 
+    // login with google
     const googleAuth = () => {
-        const auth = getAuth(app);
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user
@@ -21,12 +22,30 @@ const Login = () => {
                 console.error(errorMessage)
             });
     }
+
+    // login with email and password
+    const handleSingUpSubmit = (event) => {
+        event.preventDefault()
+        const email = event.target.email.value
+        const password = event.target.password.value
+        console.log("submit")
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user)
+            })
+            .catch((error) => {
+                const errorMessage = error.message
+                console.error(errorMessage)
+            });
+    }
     return (
         <div>
             <div className='auth-form-container '>
                 <div className='auth-form'>
                     <h1>Login</h1>
-                    <form>
+                    <form onSubmit={handleSingUpSubmit}>
                         <div className='input-field'>
                             <label htmlFor='email'>Email</label>
                             <div className='input-wrapper'>
