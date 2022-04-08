@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
+    const navigate = useNavigate()
     return (
         <div>
             <div className='auth-form-container '>
@@ -26,7 +28,7 @@ const Login = () => {
                     </form>
                     <p className='redirect'>
                         New to Tech Geeks?{" "}
-                        <span >Create New Account</span>
+                        <span onClick={() => navigate('/singup')}>Create New Account</span>
                     </p>
                     <div className='horizontal-divider'>
                         <div className='line-left' />
