@@ -1,8 +1,26 @@
 import React from 'react';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import { useNavigate } from 'react-router-dom';
+import app from '../firebase/firebase.init';
+
+const provider = new GoogleAuthProvider();
+
+
 
 const Singup = () => {
     const navigate = useNavigate()
+    const googleAuth = () => {
+        const auth = getAuth(app);
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user
+                console.log(user)
+            }).catch((error) => {
+                const errorMessage = error.message
+                console.error(errorMessage)
+            });
+    }
+
     return (
         <div className='auth-form-container '>
             <div className='auth-form'>
@@ -44,7 +62,7 @@ const Singup = () => {
                     <div className='line-right' />
                 </div>
                 <div className='input-wrapper'>
-                    <button className='google-auth'>
+                    <button  className='google-auth' onClick={googleAuth}>
                         <img src="" alt='' />
                         <p> Continue with Google </p>
                     </button>
