@@ -13,6 +13,7 @@ const Header = () => {
                 <CustomLink to='/coins'>Coins</CustomLink>
                 <CustomLink to='/contact'>Contact</CustomLink>
                 <CustomLink to='/about'>About</CustomLink>
+                <CustomLink to='/login'>Login</CustomLink>
             </div>
         </div>
     );

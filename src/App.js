@@ -10,6 +10,7 @@ import CoinDetails from './components/CoinDetails/CoinDetails';
 import BdAddress from './components/Contact/BdAddress'
 import UsAddress from './components/Contact/UsAddress'
 import NotFound from './components/NotFound/NotFound';
+import Login from './components/Login/Login';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='bd-address' element={<BdAddress />} />
           <Route path='us-address' element={<UsAddress />} />
         </Route>
+        <Route path='/login' element={<Login />} />
         <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer />
