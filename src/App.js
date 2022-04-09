@@ -12,11 +12,13 @@ import UsAddress from './components/Contact/UsAddress'
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import Singup from './components/Singup/Singup';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
     <div>
       <Header />
+      <Toaster/>
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/about' element={<About />} />
