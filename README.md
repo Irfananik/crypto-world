@@ -4,7 +4,7 @@
 
   
 
-Crypto Cafe is a React Web App powered by [COINGECKO](https://www.coingecko.com/en/api/documentation) cryptocurrency API. Visitors can browse through the top 50 Crypto Currencies. Visitors can see details of a coin by clicking on the coin card.
+Crypto world is a React Web App powered by [COINGECKO](https://www.coingecko.com/en/api/documentation) cryptocurrency API. Visitors can browse through the top 50 Crypto Currencies. Visitors can see details of a coin by clicking on the coin card.
 
   
 
@@ -19,8 +19,10 @@ Crypto Cafe is a React Web App powered by [COINGECKO](https://www.coingecko.com/
 4.  Contact Page
     
 5.  About Page
+
+6. Login Page
     
-6.  404 Not Found Page
+7.  404 Not Found Page
     
 
   
@@ -33,6 +35,10 @@ Crypto Cafe is a React Web App powered by [COINGECKO](https://www.coingecko.com/
 2.  Tailwind CSS [</ Documentation>](https://tailwindcss.com/docs/installation)
     
 3.  React Router Dom [</ Documentation>](https://reactrouter.com/docs/en/v6/getting-started/overview)
+
+4. Google firebase for authentication [</ Documentation>](https://react-hot-toast.com/docs)
+
+5. React hot toast [</ Documentation>](https://firebase.google.com/docs?authuser=0&hl=en)
     
 
   
